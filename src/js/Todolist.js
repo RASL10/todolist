@@ -1,5 +1,7 @@
+var ul = document.getElementById('demo');
+var lastid = 0;
+
 function displayText() {
-  var ul = document.getElementById('demo');
   var myText = document.getElementById('myText')
   var li = document.createElement("li");
   li.setAttribute('id', myText.value);
@@ -9,8 +11,15 @@ function displayText() {
 }
 
 function removeItem() {
-  var ul = document.getElementById("demo");
   var candidate = document.getElementById("myText");
   var item = document.getElementById(myText.value);
   ul.removeChild(item);
+  var removeButton = document.createElement('button');
+  removeButton.appendChild(document.createTextNode("remove"));
 }
+
+
+
+function() {
+    $( "#datepicker" ).datepicker();
+  } );
