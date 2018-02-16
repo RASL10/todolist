@@ -14,12 +14,5 @@ function removeItem() {
   var candidate = document.getElementById("myText");
   var item = document.getElementById(myText.value);
   ul.removeChild(item);
-  var removeButton = document.createElement('button');
-  removeButton.appendChild(document.createTextNode("remove"));
+
 }
-
-
-
-function() {
-    $( "#datepicker" ).datepicker();
-  } );
