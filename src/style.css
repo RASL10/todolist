@@ -1,3 +1,28 @@
 p {
   color: black;
 }
+
+.wrapper{
+  width:100%;
+  text-align:center;
+}
+h2{
+  font-family:'Opan Sans', sans-serif;
+  color:#555;
+}
+.carousel{
+  width:90%;
+  margin:0px auto;
+}
+.slick-slide{
+  margin:10px;
+}
+.slick-slide img{
+  width:100%;
+}
+.slick-prev:before {
+  color: black;
+}
+.slick-next:before {
+  color: black;
+}

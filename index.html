@@ -4,15 +4,25 @@
     <meta charset="utf-8">
     <title>My to do list</title>
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <link rel="stylesheet" type="text/css" href="./src/style.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css'>
+<link rel="stylesheet" type="text/css" href="./src/style.css">
 
-<!-- Javascript -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  </head>
-  <body>
+
+
+<!-- Jquery Libraries -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+<!-- Slick Library -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js'></script>
+
+
+</head>
+
+
+<body>
 <h1>To do List</h1>
 <input type="text" id="myText" placeholder="Some text...">
 <button onclick="displayText()">Add Item</button>
@@ -20,8 +30,19 @@
 <ul id="demo"></ul>
 <p>Date: <input type="text" id="datepicker"></p>
 
+<div class="wrapper">
+<div class="carousel">
+  <div><img src="https://cdn.shopify.com/s/files/1/1725/5449/products/Gourmet_subscription_900x.jpg?v=1517257402"></div>
+  <div><img src="https://cdn.shopify.com/s/files/1/1725/5449/products/Gourmet_subscription_900x.jpg?v=1517257402"></div>
+  <div><img src="https://cdn.shopify.com/s/files/1/1725/5449/products/Gourmet_subscription_900x.jpg?v=1517257402"></div>
+  <div><img src="https://cdn.shopify.com/s/files/1/1725/5449/products/Gourmet_subscription_900x.jpg?v=1517257402"></div>
+  <div><img src="https://cdn.shopify.com/s/files/1/1725/5449/products/Gourmet_subscription_900x.jpg?v=1517257402"></div>
+  <div><img src="https://cdn.shopify.com/s/files/1/1725/5449/products/Gourmet_subscription_900x.jpg?v=1517257402"></div>
+</div>
+</div>
 
-  </body>
 
-  <script type="text/javascript" src="./src/js/Todolist.js"></script>
+</body>
+
+<script type="text/javascript" src="./src/js/Todolist.js"></script>
 </html>
