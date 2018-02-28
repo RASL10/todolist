@@ -26,3 +26,34 @@ h2{
 .slick-next:before {
   color: black;
 }
+
+/* Add a "checked" mark when clicked on */
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
