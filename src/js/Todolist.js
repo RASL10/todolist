@@ -26,21 +26,15 @@ function displayText() {
     var textbox=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
     var containsClass=li.classList.contains("editMode");
-    		//If class of the parent is .editmode
-    		if(containsClass){
-
-    		//switch to .editmode
-    		//label becomes the inputs value.
-label.innerText=textbox.value;
-
-    		}else{
-textbox.value=label.innerText;
-
+    var containschecked=label.classList.contains("checked");
+          if (containsClass) {
+            label.innerText=textbox.value;
+            editTask.setAttribute("value", "edit");
+    		} else {
+            textbox.value=label.innerText;
+            editTask.setAttribute("value", "ok");
     		}
-
-    		//toggle .editmode on the parent.
-    		listItem.classList.toggle("editMode");
-
+    listItem.classList.toggle("editMode");
 
 });
 
