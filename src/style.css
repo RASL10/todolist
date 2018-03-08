@@ -83,3 +83,15 @@ ul li {
     color: #fff;
     text-decoration: line-through;
   }
+
+  ul li input[type=text] {
+  display:none;
+}
+
+ul li.editMode input[type=text] {
+  display:block;
+}
+
+ul li.editMode label {
+  display:none;
+}
