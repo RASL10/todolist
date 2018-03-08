@@ -11,6 +11,9 @@ function displayText() {
   li.appendChild(label);
 
   li.setAttribute('id', 'edit');
+  label.addEventListener('click', function() {
+        label.classList.toggle("checked");
+    }, false);
 
   document.getElementById('demo').appendChild(li)
 
@@ -59,8 +62,3 @@ $(function() {
     maxDate: 5
   } );
 } );
-
-
-li.addEventListener('click', function() {
-      li.classList.toggle("checked");
-  }, false);

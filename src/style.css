@@ -78,7 +78,7 @@ ul li {
   transition: 0.2s;
 }
   /* When clicked on, add a background color and strike out text */
-  ul li.checked {
+  li label.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
