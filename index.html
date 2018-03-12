@@ -21,10 +21,16 @@
 
 <body>
 <h1>To do List</h1>
-<input type="text" id="myText" placeholder="Some text...">
-<button onclick="displayText()">Add Item</button>
-<ul id="demo"></ul>
-<p>Date: <input type="text" id="datepicker"></p>
+<div style="width: 100%">
+<input type="text" id="myText" placeholder="Some text..."><p style="display: inline-block">Due Date: <input type="text" id="datepicker"></p>
+<button onclick="displayText(), displayDate()">Add Item</button>
+</div>
+<div style="width: 100%">
+<ul style="display: inline-block" id="list"></ul>
+<ul style="display: inline-block" id="date"></ul>
+</div>
+
+<button onclick="displaycalendar()">Show date</button>
 
 
 </body>
