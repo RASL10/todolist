@@ -95,3 +95,11 @@ ul li.editMode input[type=text] {
 ul li.editMode label {
   display:none;
 }
+
+.hello-style {
+  color: red;
+}
+
+.bye-style {
+  color: green;
+}
