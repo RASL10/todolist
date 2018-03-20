@@ -54,11 +54,6 @@ function displayDate() {
 
 }
 
-
-
-
-
-
 function displayText() {
   var input = document.getElementById('myText').value;
   var li = document.createElement("li");
@@ -117,26 +112,65 @@ li.appendChild(removeTask);
 
 }
 
+
+
+
+var array = ["2018-03-29"]
+
 $(function() {
-  $( "#datepicker" ).datepicker({
-    maxDate: 20,
+  var today = new Date();
+  $("#datepicker").datepicker({
+    dateFormat: 'dd MM yy',
+    beforeShowDay: function(date) {
+      var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+      if (contains(array,string)) {
+        debugger;
+        return [false, '']
+      } else {
+        var day = date.getDay();
+        return [(day != 0), ''];
+      }
+    },
   });
-} );
+});
 
-$(document).on('focus', "#datepicker", function () {
-    $(this).datepicker( "destroy" ).datepicker();
-})
 
-$(document).on('focus', "#datepickeredit", function () {
-    $(this).datepicker( "destroy" ).datepicker();
-})
+
 
 $(function() {
   $( "#datepickeredit" ).datepicker({
-    maxDate: 20,
+    maxDate: 5,
   });
 } );
 
+$(document).on('focus', "#datepickeredit", function () {
+
+    $(this).datepicker({
+      dateFormat: 'dd/MM/yy',
+      beforeShowDay: function(date) {
+        var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+        if (contains(array,string)) {
+          debugger;
+          return [false, '']
+        } else {
+          var day = date.getDay();
+          return [(day != 0), ''];
+        }
+      },
+    });
+
+
+});
+
+function contains(a, obj) {
+    var i = a.length;
+    while (i--) {
+       if (a[i] === obj) {
+           return true;
+       }
+    }
+    return false;
+}
 
 
 
