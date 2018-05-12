@@ -293,5 +293,4 @@ function run(){
   document.getElementById("deliveryFee").innerHTML = deliveryFee;
   document.getElementById("total").innerHTML = total;
   document.getElementById("savings").innerHTML = savings;
-
 }
