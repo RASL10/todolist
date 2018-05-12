@@ -16,14 +16,22 @@
 <script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
 <!-- Slick Library -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js'></script>
-
-</head>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.js'></script>
 
 <body>
+  <header>
+  <ul class="list">
+    <li class="list-item">Products</li>
+    <li class="list-item">Men's</li>
+    <li class="list-item">Women's</li>
+  </ul>
+</header>
 <h1>To do List</h1>
 <div style="width: 100%">
-<input type="text" id="myText" placeholder="Some text..."><p style="display: inline-block">Due Date: <input type="text" id="datepicker" class="datepicker"></p>
-<button onclick="displayText(), displayDate()">Add Item</button>
+<form>
+<input type="text" id="myText" placeholder="Some text..." required><p style="display: inline-block">Due Date: <input type="text" id="datepicker" class="datepicker" required placeholder="Select date"></p>
+<submit id="userinput" onclick="displayText(), displayDate()">Add Item</submit>
+</fom>
 </div>
 <div style="width: 100%">
 <ul style="display: inline-block" id="list"></ul>
@@ -36,7 +44,97 @@
 <button onclick="checkValue()">confirm number</button>
 <p id='hello'>Ok</p>
 
-</body>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+<div id="clock"></div>
+
+
+
+<!-- based on https://jsfiddle.net/greypants/zgCb7/ -->
+<div style="margin-bottom: 100px;">
+  yo
+</div>
+<div class="video-section">
+  <div class="video-left">
+    <div class="video-left-section">
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/1725/5449/files/new_stage_1_14b01bc8-297c-4b51-9ae5-d6235d6dc5a1_530x.png?v=1519118919">
+        </div>
+        <div>
+          <h1>YOU CHOOSE</h1>
+          <p>From our weekly menu of fresh pasta recipes. We recommend 1 serving per person. Our chefs use the finest seasonal ingredients and produce from Italy.</P>
+        </div>
+    </div>
+    <div class="video-left-section">
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/1725/5449/files/new_pasta_box_shot_3_530x.png?v=1521821404">
+        </div>
+        <div>
+            <h1>WE DELIVER NATIONWIDE</h1>
+            <p>Chilled boxes of fresh pasta, sauces & garnishes. London deliveries posted through letterboxes, orders to rest of the UK sent in insulated packaging.</p>
+        </div>
+  </div>
+  <div class="video-left-section">
+        <div>
+          <img src="https://cdn.shopify.com/s/files/1/1725/5449/files/3_stage_new_530x.png?v=1519119176">
+        </div>
+        <div>
+          <h1>YOU PREPARE</h1>
+          <p>Artisanal, five-star pasta dishes in minutes with our simple recipe cards. Alternatively, freeze your dish for up to two months and prepare it later.</p>
+        </div>
+  </div>
+
+  </div>
+  <div class="video-right">
+    <video class="video" width="550"  controlsList="nodownload" >
+      <source src="https://cdn.shopify.com/s/files/1/1725/5449/files/Pasta_Evangelist_1_1.mp4?16923053668035830800" type="video/mp4">
+    </video>
+     <div class="playpause"></div>
+</div>
+
+  </div>
+</div>
+<h1>See if you should subscribe</h1>
+
+
+<p id="p1"></p>
+<p id="p2"></p>
+
+<h5>Delivery fee</h5>
+<span>£</span><p style="display: inline-block" id="deliveryFee"></p>
+
+
+<h5>Meal Spend</h5>
+<span>£</span><p style="display: inline-block"id="result"></p>
+
+
+<h5>Total:</h5>
+<span>£</span><p style="display: inline-block"id="total"></p>
+
+<h5>You would save:</h5>
+<span>£</span><p style="display: inline-block" id="savings"></p>
+
+
+
+<p>What is your frequency?<p>
+<select class="classic" id="ddlViewBy" onchange="update()">
+  <option value="4" selected="selected">Weekly</option>
+  <option value="2">Fortnightly</option>
+  <option value="1">Monthly</option>
+</select>
+
+<p>How many meals do you order per week?<p>
+  <select class="classic" id="numberz" onchange="run()">
+    <option value="7" selected="selected">1 - £7</option>
+    <option value="14" >2 - £14</option>
+    <option value="21" >3 - £21</option>
+    <option value="28" >4 - £28</option>
+    <option value="35" >5 - £35</option>
+    <option value="42" >6 - £42</option>
+  </select>
 
 <script type="text/javascript" src="./src/js/Todolist.js"></script>
 </html>
