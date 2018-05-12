@@ -61,30 +61,18 @@
 
 <h1>See if you should subscribe</h1>
 
-<h5>Delivery fee</h5>
-<span>£</span><p style="display: inline-block" id="deliveryFee"></p>
+<div style="display: inline-block; margin-right: 30px;">
+<p>Order frequency?<p>
 
-
-<h5>Meal Spend</h5>
-<span>£</span><p style="display: inline-block"id="result"></p>
-
-
-<h5>Total:</h5>
-<span>£</span><p style="display: inline-block"id="total"></p>
-
-<h5>You would save:</h5>
-<span>£</span><p style="display: inline-block" id="savings"></p>
-
-
-
-<p>What is your frequency?<p>
 <select class="classic" id="ddlViewBy" onchange="update()">
   <option value="4" selected="selected">Weekly</option>
   <option value="2">Fortnightly</option>
   <option value="1">Monthly</option>
 </select>
+</div>
 
-<p>How many meals do you order per week?<p>
+<div style="display: inline-block">
+<p >Number meals/week?<p>
   <select class="classic" id="numberz" onchange="run()">
     <option value="7" selected="selected">1 - £7</option>
     <option value="14" >2 - £14</option>
@@ -93,6 +81,22 @@
     <option value="35" >5 - £35</option>
     <option value="42" >6 - £42</option>
   </select>
+</div>
+
+  <h5>Delivery fee</h5>
+  <span>£</span><p style="display: inline-block" id="deliveryFee"></p>
+
+
+  <h5>Meal Spend</h5>
+  <span>£</span><p style="display: inline-block" id="result"></p>
+
+
+  <h5>Total:</h5>
+  <span>£</span><p style="display: inline-block" id="total"></p>
+
+  <h5>You would save:</h5>
+  <span>£</span><p style="display: inline-block" id="savings"></p>
+
 
 <script type="text/javascript" src="./src/js/Todolist.js"></script>
 </html>
