@@ -1,4 +1,3 @@
-
 function displayDate() {
   var dateInput = document.getElementById('datepicker').value;
   var dateLabel = document.createElement('label');
@@ -255,7 +254,9 @@ $('#clock').countdown('2018/04/10 12:34:56', function(event) {
 
 document.getElementById("p1").innerHTML= document.getElementById("ddlViewBy").value;
 document.getElementById("p2").innerHTML= document.getElementById("numberz").value;
-document.getElementById("mealPrice").innerHTML = document.getElementById("numberz").value / 2;
+document.getElementById("mealPrice").innerHTML= document.getElementById("numberz").value/2;
+document.getElementById("oneoff").innerHTML = 7.5;
+
 
 function update(){
   var e = document.getElementById("ddlViewBy").value;
@@ -276,6 +277,7 @@ function update(){
 
 function run(){
   var e = document.getElementById("numberz").value;
+  var pastaclub = document.getElementById("pasta-club").value;
   var frequency = document.getElementById("ddlViewBy").value;
   var result = frequency * e;
   var deliveryFee = 2.50 * frequency;
@@ -288,15 +290,19 @@ function run(){
   document.getElementById("total").innerHTML = total;
   document.getElementById("savings").innerHTML = savings;
 
-  if (e == 13.90) {
+
+  if (pastaclub == 'vegetarian' ) {
+    document.getElementById("oneoff").innerHTML = 7.5;
+
+    if (e == 13.90 ) {
     var mealdecimalPricing = e/2;
     var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
     document.getElementById("mealPrice").innerHTML = mealPricing;
-  } else if (e == 20.55) {
+  } else if (e == 20.55 ) {
     var mealdecimalPricing = e/3;
     var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
     document.getElementById("mealPrice").innerHTML = mealPricing;
-  } else if (e == 27.20) {
+  } else if (e == 27.20 ) {
     var mealdecimalPricing = e/4;
     var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
     document.getElementById("mealPrice").innerHTML = mealPricing;
@@ -309,6 +315,132 @@ function run(){
     var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   }
+} else if (pastaclub == 'fish') {
+  document.getElementById("oneoff").innerHTML = 9.5;
+  if (e == 13.90) {
+    var mealdecimalPricing = e/2 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10 ;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 20.55 ) {
+    var mealdecimalPricing = e/3 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10 ;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 27.20) {
+    var mealdecimalPricing = e/4 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 33.85 ) {
+    var mealdecimalPricing = e/5 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 40.05) {
+    var mealdecimalPricing = e/6 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  }
+}
+}
 
+function sub() {
+
+  var pastaclub = document.getElementById("pasta-club").value;
+  var e = document.getElementById("numberz").value;
+
+  if (pastaclub == 'vegetarian' ) {
+        document.getElementById("oneoff").innerHTML = 7.5;
+
+    if (e == 13.90) {
+    var mealdecimalPricing = e/2;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10 ;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 20.55 ) {
+    var mealdecimalPricing = e/3;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 27.20) {
+    var mealdecimalPricing = e/4;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 33.85 ) {
+    var mealdecimalPricing = e/5;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 40.05) {
+    var mealdecimalPricing = e/6;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  }
+} else if (pastaclub == 'fish') {
+    document.getElementById("oneoff").innerHTML = 9.5;
+  if (e == 13.90) {
+    var mealdecimalPricing = e/2 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 20.55 ) {
+    var mealdecimalPricing = e/3 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 27.20) {
+    var mealdecimalPricing = e/4 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 33.85 ) {
+    var mealdecimalPricing = e/5 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 40.05 && veg == "vegetarian") {
+    var mealdecimalPricing = e/6 + 0.95;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  }
+}
 
 }
+
+
+var output = document.getElementById("output")
+var ajaxhttp = new XMLHttpRequest();
+var url = "https://api.myjson.com/bins/13owny";
+
+ajaxhttp.open('GET', url, true)
+ajaxhttp.setRequestHeader('content-type', 'application/json')
+ajaxhttp.onreadystatechange = function () {
+  if (ajaxhttp.readyState == 4 && ajaxhttp.status == 200) {
+    var jcontent = JSON.parse(ajaxhttp.responseText)
+    output.innerHTML = jcontent.firstName;
+  }
+}
+ajaxhttp.send();
+
+output.innerText = "nothing"
+
+
+function populate(s1,s2){
+  var s1 = document.getElementById(s1);
+  var s2 = document.getElementById(s2);
+  s2.innerHTML = "";
+
+
+  if(s1.value == "Vegetarian"){
+    var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
+  } else if(s1.value == "Fish"){
+    var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
+  } else if(s1.value == "Ford"){
+    var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
+  }
+
+
+  for(var option in optionArray){
+    var pair = optionArray[option].split("|");
+    var newOption = document.createElement("option");
+    newOption.value = pair[0];
+    newOption.innerHTML = pair[1];
+    s2.options.add(newOption);
+  }
+}
+
+
+
+
+
+

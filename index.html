@@ -56,6 +56,10 @@
         <h1>Make your choice</h1>
         <p>Order a standalone delivery or subscribe and save. Subscriptions are fully flexible, pause or cancel anytime.</p>
           <div class="numbers">
+            <select class="classic" id="pasta-club" onchange="sub()">
+              <option value="vegetarian" selected="selected">Vegetarian</option>
+              <option value="fish" >Meat and fish</option>
+            </select>
             <select class="classic" id="numberz" onchange="run()">
               <option value="13.90" selected="selected">2 Servings</option>
               <option value="20.55" >3 Servings</option>
@@ -70,8 +74,12 @@
             <div class="compare-left-section">
               <h1>One off</h1>
               <img src="https://cdn.shopify.com/s/files/1/1725/5449/files/test1_780x.png?v=1525793234">
-              <p>£9<span> PER serving (£2.50 DELIVERY)</span></p>
+              <div class="dynamic-price">
+                <p>£</p>
+                <p style="margin-right: 5px;"id="oneoff"></p>
+                <span style="margin-top: 15px;">  PER serving (FREE DELIVERY)</span>
               </div>
+            </div>
           </div>
           <div class="compare-right">
             <div class="compare-right-section">
@@ -97,6 +105,46 @@
       <br/>
       <br/>
       <br/>
+
+<div class="switch-field">
+      <div class="switch-title">Is this awesome?</div>
+      
+      <input type="radio" id="switch_left" name="switch_2" value="yes" checked/>
+      <label for="switch_left">Yes</label>
+
+      <input type="radio" id="switch_right" name="switch_2" value="no" />
+      <label for="switch_right">No</label>
+</div>
+
+<div id="output">Nothing yet</div>
+
+
+<script>
+
+</script>
+</head>
+<body>
+<h2>Choose Your Car</h2>
+<hr />
+Choose Car Make:
+<select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
+  <option value=""></option>
+  <option value="Chevy">Chevy</option>
+  <option value="Dodge">Dodge</option>
+  <option value="Ford">Ford</option>
+</select>
+<hr />
+Choose Car Model:
+<select id="slct2" name="slct2"></select>
+<hr />
+
+
+
+
+
+
+
+
 
 
       <h5>ignore</h5>
