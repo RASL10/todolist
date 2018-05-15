@@ -40,7 +40,7 @@ select {
 
   /* styling */
   background-color: white;
-  border: thin solid #BB9035;
+  border: thin solid transparent;
   border-radius: 1px;
   display: inline-block;
   font: inherit;
@@ -1289,4 +1289,27 @@ span.choose {
 }
 .dropdown .dropdown-menu li:active {
     background-color: #e2e2e2
+}
+
+.btn-clear-sub {
+    background-color: #BB9035;
+    color: white;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 30px;
+     border-radius: 0px !important;
+}
+
+.btn-clear-sub-one {
+    background-color: #323232;
+    color: white;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 0px !important;
+}
+
+#sub-link {
+	text-decoration: none;
+	color: white;
 }

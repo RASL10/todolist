@@ -291,6 +291,7 @@ function run(){
   document.getElementById("savings").innerHTML = savings;
 
 
+
   if (pastaclub == 'vegetarian' ) {
     document.getElementById("oneoff").innerHTML = 7.5;
 
@@ -348,6 +349,8 @@ function sub() {
 
   if (pastaclub == 'vegetarian' ) {
         document.getElementById("oneoff").innerHTML = 7.5;
+        document.getElementById("sub-link").href="https://pastaevangelists.com/pages/subscription-page?sub=vegetarian";
+
 
     if (e == 13.90) {
     var mealdecimalPricing = e/2;
@@ -372,6 +375,8 @@ function sub() {
   }
 } else if (pastaclub == 'fish') {
     document.getElementById("oneoff").innerHTML = 9.5;
+    document.getElementById("sub-link").href="https://pastaevangelists.com/pages/subscription-page?sub=variety";
+
   if (e == 13.90) {
     var mealdecimalPricing = e/2 + 0.95;
     var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
