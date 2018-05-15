@@ -146,6 +146,7 @@ $(document).on('focus', "#datepickeredit", function () {
     $(this).datepicker({
       dateFormat: "yy-mm-dd",
       maxDate: new Date('2018-3-26'),
+      numberOfMonths: 3,
       beforeShowDay: function(date) {
         var string = jQuery.datepicker.formatDate('dd/mm/yy', date);
         if (contains(array,string)) {
@@ -249,28 +250,21 @@ $('#clock').countdown('2018/04/10 12:34:56', function(event) {
 });
 
 
-$('.video').parent().click(function () {
-    if($(this).children(".video").get(0).paused){
-        $(this).children(".video").get(0).play();
-        $(this).children(".playpause").fadeOut();
-    }else{
-       $(this).children(".video").get(0).pause();
-        $(this).children(".playpause").fadeIn();
-    }
-});
+
 
 
 document.getElementById("p1").innerHTML= document.getElementById("ddlViewBy").value;
 document.getElementById("p2").innerHTML= document.getElementById("numberz").value;
-
+document.getElementById("mealPrice").innerHTML = document.getElementById("numberz").value / 2;
 
 function update(){
-  var e = document.getElementById("ddlViewBy").value
+  var e = document.getElementById("ddlViewBy").value;
   var meals = document.getElementById("numberz").value;
   var result = e * meals
   var deliveryFee = 2.50 * e
   var total = deliveryFee + result
   var savings = total - result
+
 
   document.getElementById("p1").innerHTML= document.getElementById("ddlViewBy").value;
   document.getElementById("result").innerHTML = result;
@@ -281,16 +275,40 @@ function update(){
 }
 
 function run(){
-  var e = document.getElementById("numberz").value
+  var e = document.getElementById("numberz").value;
   var frequency = document.getElementById("ddlViewBy").value;
-  var result = frequency * e
-  var deliveryFee = 2.50 * frequency
-  var total = deliveryFee + result
-  var savings = total - result
+  var result = frequency * e;
+  var deliveryFee = 2.50 * frequency;
+  var total = deliveryFee + result;
+  var savings = total - result;
 
   document.getElementById("p2").innerHTML= document.getElementById("numberz").value;
   document.getElementById("result").innerHTML = result;
   document.getElementById("deliveryFee").innerHTML = deliveryFee;
   document.getElementById("total").innerHTML = total;
   document.getElementById("savings").innerHTML = savings;
+
+  if (e == 13.90) {
+    var mealdecimalPricing = e/2;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 20.55) {
+    var mealdecimalPricing = e/3;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 27.20) {
+    var mealdecimalPricing = e/4;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 33.85) {
+    var mealdecimalPricing = e/5;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  } else if (e == 40.05) {
+    var mealdecimalPricing = e/6;
+    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    document.getElementById("mealPrice").innerHTML = mealPricing;
+  }
+
+
 }

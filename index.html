@@ -51,11 +51,55 @@
 
 <div id="clock"></div>
 
+    <div class="homepage-columns {{ section.settings.homepage_columns_color }}">
+      <div class="wrapper-compare">
+        <h1>Make your choice</h1>
+        <p>Order a standalone delivery or subscribe and save. Subscriptions are fully flexible, pause or cancel anytime.</p>
+          <div class="numbers">
+            <select class="classic" id="numberz" onchange="run()">
+              <option value="13.90" selected="selected">2 Servings</option>
+              <option value="20.55" >3 Servings</option>
+              <option value="27.20" >4 Servings</option>
+              <option value="33.85" >5 Servings</option>
+              <option value="40.05" >6 Servings</option>
+            </select>
+          </div>
+      </div>
+        <div class="compare-section">
+          <div class="compare-left">
+            <div class="compare-left-section">
+              <h1>One off</h1>
+              <img src="https://cdn.shopify.com/s/files/1/1725/5449/files/test1_780x.png?v=1525793234">
+              <p>£9<span> PER serving (£2.50 DELIVERY)</span></p>
+              </div>
+          </div>
+          <div class="compare-right">
+            <div class="compare-right-section">
+              <h1>Subscribe + Save</h1>
+              <img src="https:////cdn.shopify.com/s/files/1/1725/5449/files/pasta_780x.png?v=1525794828">
+              <div class="dynamic-price">
+                <p>£</p>
+                <p style="margin-right: 5px;"id="mealPrice"></p>
+                <span style="margin-top: 15px;">  PER serving (FREE DELIVERY)</span>
+            </div>
 
 
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+            <br/>
+
+      <br/>
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
 
 
-<h5>ignore</h5>
+      <h5>ignore</h5>
 <p id="p1"></p>
 <p id="p2"></p>
 
@@ -71,21 +115,14 @@
 </select>
 </div>
 
-<div style="display: inline-block">
-<p >Number meals/week?<p>
-  <select class="classic" id="numberz" onchange="run()">
-    <option value="7" selected="selected">1 - £7</option>
-    <option value="14" >2 - £14</option>
-    <option value="21" >3 - £21</option>
-    <option value="28" >4 - £28</option>
-    <option value="35" >5 - £35</option>
-    <option value="42" >6 - £42</option>
-  </select>
-</div>
+
+
 
   <h5>Delivery fee</h5>
   <span>£</span><p style="display: inline-block" id="deliveryFee"></p>
 
+<h5>Price/meal</h5>
+  <span>£</span><p style="display: inline-block"</p>
 
   <h5>Meal Spend</h5>
   <span>£</span><p style="display: inline-block" id="result"></p>
