@@ -252,43 +252,17 @@ $('#clock').countdown('2018/04/10 12:34:56', function(event) {
 
 
 
-document.getElementById("p1").innerHTML= document.getElementById("ddlViewBy").value;
-document.getElementById("p2").innerHTML= document.getElementById("numberz").value;
+
 document.getElementById("mealPrice").innerHTML= document.getElementById("numberz").value/2;
 document.getElementById("oneoff").innerHTML = 7.5;
 
 
-function update(){
-  var e = document.getElementById("ddlViewBy").value;
-  var meals = document.getElementById("numberz").value;
-  var result = e * meals
-  var deliveryFee = 2.50 * e
-  var total = deliveryFee + result
-  var savings = total - result
 
-
-  document.getElementById("p1").innerHTML= document.getElementById("ddlViewBy").value;
-  document.getElementById("result").innerHTML = result;
-  document.getElementById("deliveryFee").innerHTML = deliveryFee;
-  document.getElementById("total").innerHTML = total;
-  document.getElementById("savings").innerHTML = savings;
-
-}
 
 function run(){
   var e = document.getElementById("numberz").value;
   var pastaclub = document.getElementById("pasta-club").value;
-  var frequency = document.getElementById("ddlViewBy").value;
-  var result = frequency * e;
-  var deliveryFee = 2.50 * frequency;
-  var total = deliveryFee + result;
-  var savings = total - result;
 
-  document.getElementById("p2").innerHTML= document.getElementById("numberz").value;
-  document.getElementById("result").innerHTML = result;
-  document.getElementById("deliveryFee").innerHTML = deliveryFee;
-  document.getElementById("total").innerHTML = total;
-  document.getElementById("savings").innerHTML = savings;
 
 
 
@@ -297,46 +271,46 @@ function run(){
 
     if (e == 13.90 ) {
     var mealdecimalPricing = e/2;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 20.55 ) {
     var mealdecimalPricing = e/3;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 27.20 ) {
     var mealdecimalPricing = e/4;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 33.85) {
     var mealdecimalPricing = e/5;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 40.05) {
     var mealdecimalPricing = e/6;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   }
 } else if (pastaclub == 'fish') {
   document.getElementById("oneoff").innerHTML = 9.5;
   if (e == 13.90) {
     var mealdecimalPricing = e/2 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10 ;
+    var mealPricing = Math.round( mealdecimalPricing * 100) / 100 ;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 20.55 ) {
     var mealdecimalPricing = e/3 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10 ;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100 ;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 27.20) {
     var mealdecimalPricing = e/4 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 33.85 ) {
     var mealdecimalPricing = e/5 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 40.05) {
     var mealdecimalPricing = e/6 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   }
 }
@@ -354,19 +328,19 @@ function sub() {
 
     if (e == 13.90) {
     var mealdecimalPricing = e/2;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10 ;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100 ;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 20.55 ) {
     var mealdecimalPricing = e/3;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 27.20) {
     var mealdecimalPricing = e/4;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 33.85 ) {
     var mealdecimalPricing = e/5;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 40.05) {
     var mealdecimalPricing = e/6;
@@ -379,23 +353,23 @@ function sub() {
 
   if (e == 13.90) {
     var mealdecimalPricing = e/2 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 20.55 ) {
     var mealdecimalPricing = e/3 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 27.20) {
     var mealdecimalPricing = e/4 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   } else if (e == 33.85 ) {
     var mealdecimalPricing = e/5 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
-  } else if (e == 40.05 && veg == "vegetarian") {
+  } else if (e == 40.05) {
     var mealdecimalPricing = e/6 + 0.95;
-    var mealPricing = Math.round( mealdecimalPricing * 10 ) / 10;
+    var mealPricing = Math.round( mealdecimalPricing * 100 ) / 100;
     document.getElementById("mealPrice").innerHTML = mealPricing;
   }
 }
@@ -420,29 +394,7 @@ ajaxhttp.send();
 output.innerText = "nothing"
 
 
-function populate(s1,s2){
-  var s1 = document.getElementById(s1);
-  var s2 = document.getElementById(s2);
-  s2.innerHTML = "";
 
-
-  if(s1.value == "Vegetarian"){
-    var optionArray = ["|","camaro|Camaro","corvette|Corvette","impala|Impala"];
-  } else if(s1.value == "Fish"){
-    var optionArray = ["|","avenger|Avenger","challenger|Challenger","charger|Charger"];
-  } else if(s1.value == "Ford"){
-    var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
-  }
-
-
-  for(var option in optionArray){
-    var pair = optionArray[option].split("|");
-    var newOption = document.createElement("option");
-    newOption.value = pair[0];
-    newOption.innerHTML = pair[1];
-    s2.options.add(newOption);
-  }
-}
 
 /*Dropdown Menu*/
 $('.dropdown').click(function () {
