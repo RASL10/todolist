@@ -379,7 +379,7 @@ function sub() {
 
 var output = document.getElementById("output")
 var ajaxhttp = new XMLHttpRequest();
-var url = "http://samples.openweathermap.org/data/2.5/find?q=London&units=metric&appid=2804fe82cff756c1920dd377909b24f2";
+var url = "https://samples.openweathermap.org/data/2.5/find?q=London&units=metric&appid=2804fe82cff756c1920dd377909b24f2";
 
 ajaxhttp.open('GET', url, true)
 ajaxhttp.setRequestHeader('content-type', 'application/json')
